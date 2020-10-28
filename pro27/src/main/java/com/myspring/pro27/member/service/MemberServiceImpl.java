@@ -34,4 +34,10 @@ private MemberDAO memberDAO;
 		return memberDAO.deleteMember(id);
 	}
 
+	@Override
+	public MemberVO login(MemberVO memberVO) throws Exception {
+		
+		return memberDAO.loginById(memberVO);
+	}
+
 }
