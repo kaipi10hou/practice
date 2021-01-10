@@ -7,6 +7,8 @@ public class Baseball {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int regame;
+		do {
 		int a, b, c, d;
 		int uNum = 0;
 		int ua = 0;
@@ -15,6 +17,8 @@ public class Baseball {
 		int ud = 0;
 		int count =0;
 		boolean check = true;
+
+	
 		// 난수생성
 		do {
 			Random rd = new Random();
@@ -34,7 +38,7 @@ public class Baseball {
 		do {
 			do {
 				System.out.print(">>>>>>");
-				count++;
+				
 				uNum = sc.nextInt();
 				ud = uNum % 10;
 				uc = (uNum / 10) % 10;
@@ -65,11 +69,16 @@ public class Baseball {
 				Bcount++;
 			if (d == ua || d == ub || d == uc)
 				Bcount++;
+			count++;
 			System.out.print(count+"번째 : ");
 			System.out.print(Scount + "S");
 			System.out.println(Bcount + "B");
 			if (Scount == 4)
 				check = false;
 		} while (check);
+		System.out.println("☆★☆★☆★☆★성공☆★☆★☆★☆★");
+		System.out.print(" 한 판 더 하려면 0☞");
+	    regame = sc.nextInt();
+		}while(regame==0);
 	}
 }
